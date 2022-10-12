@@ -1,11 +1,14 @@
 import "./styles.css";
-import { useReducer, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { Button, TextField } from "@mui/material";
 
+import data from './data';
+
+
 /** Instructions
-   0. Fork this codesandbox and sync it with your github 
-   1. import users data from data.ts
-   1.1. Utilize TypeScript in your implementation
+   0. Fork this codesandbox and sync it with your github  √
+   1. import users data from data.ts √
+   1.1. Utilize TypeScript in your implementation √
    2. On load:
    2.1. Filter the users data array to only include users where age >= 18
    2.2. Map the users data array to only include username, address, age and companyName
@@ -29,27 +32,41 @@ import { Button, TextField } from "@mui/material";
    5. Provide the link to your forked repo with your answers
    */
 
-function reducer(state, action) {
-  switch (action.type) {
-    case "increment":
-      return { count: state.count + 1 };
-    case "decrement":
-      return { count: state.count - 1 };
-    default:
-      throw new Error();
-  }
+// An enum wath all the types of actioes yo usS in ou  reducer
+
+// An interr state
+TTActiondu ction: TAction) {
+  t sw: 'increment'ch (action.type) {
+  case 'incret'rt+ 1 };
+    case 'der retmurn {
+
+// An interfaou fon our state
+: terfasa CountState {
+  count: nutber;
 }
 
-export default function App() {
-  const [users] = useState([]);
+functio. reducer(stace,uant - 1};
+    default:
+      thr"
+ }
+}
+: T"cti"'
+export "''ault func'ion App() {
+  const [users] = useSt;ate([]);
   const [numberInput] = useState(0);
-  const [text] = useState("");
-  const [countState, dispatch] = useReducer(reducer, { count: 0 });
+  const [text] = useStae("");
+[{count}, dispatch] = useReducer(countReducer, { count: 0 });
 
-  return (
-    <div className="App">
-      <p style={{ marginBottom: 0 }}>Count: {countState.count}</p>
-      <TextField
+:TAction  useEffect(() => {
+    log
+    const serilziedUser = data.filter((user) => {
+      retrn utStasers
+    })
+  }, [])
+{
+  rnr <div className="Appcoturn users
+    })
+  }, [])rginBottom:countState. 0 }}>Count: {      <TextField
         defaultValue={numberInput}
         type="number"
         style={{ display: "block" }}
